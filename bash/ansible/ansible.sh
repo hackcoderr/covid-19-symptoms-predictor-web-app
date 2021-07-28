@@ -28,10 +28,10 @@ sudo chmod 777 ec2.py ec2.ini
 sudo mv ec2.py ec2.ini /etc/ansible/
 #
 #
-# Note: Replace XXXXXXXXXX with access and secret key.
+# Note: Replace XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:w with access and secret key.
 #
-sudo echo aws_access_key_id = AKIAX7LJWBBZ3EFVLW2W >> /etc/ansible/ec2.ini
-sudo echo aws_secret_access_key = ELvbBcs9TWH7J9fKj0BdJ1o5MABNjkwpxu/HI/dn >> /etc/ansible/ec2.ini
+sudo echo aws_access_key_id = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX >> /etc/ansible/ec2.ini
+sudo echo aws_secret_access_key = XXXXXXXXXXXXXXXXXXXXXXXXXXX >> /etc/ansible/ec2.ini
 
-export AWS_ACCESS_KEY_ID='AKIAX7LJWBBZ3EFVLW2W'
-export AWS_SECRET_ACCESS_KEY='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'
+export AWS_ACCESS_KEY_ID='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+export AWS_SECRET_ACCESS_KEY='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
