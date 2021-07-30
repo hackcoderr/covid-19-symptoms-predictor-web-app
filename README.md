@@ -12,3 +12,15 @@ sudo yum install wget -y
 sudo wget https://github.com/hackcoderr/covid-19-symptoms-predictor-web-app/blob/master/bash/ansible/ansible.sh
 sudo bash ansible.sh
 ```
+
+## Terraform Setup
+
+Run the following group of commands to install the terraform.
+
+Tested on: RHEL, Fedora, Centos and Ubuntu
+
+Note: ``wget`` should be installed.
+```terraform script
+sudo wget https://raw.githubusercontent.com/hackcoderr/covid-19-symptoms-predictor-web-app/master/bash/terraform/terrafrom.sh
+sudo bash terraform.sh
+```
