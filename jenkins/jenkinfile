@@ -1,0 +1,18 @@
+pipeline {     
+    agent any      
+       stages { 
+         stage('BuildingCovidPrectionPod'){   
+           steps {                   
+           sh 'sudo kubectl create deployment mlopscovidpred  --image=hackcoderr/covid-predictor:v1   --kubeconfig /root/admin.conf'
+           sh 'sudo kubectl expose deployment mlopscovidpred --type=NodePort  --port=4444   --kubeconfig /root/admin.conf'                          
+           sh 'sudo kubectl get pod -o wide   --kubeconfig /root/admin.conf'                                
+    }       
+ }         
+       stage('gettingpod'){   
+           steps {                     
+              sh 'sudo kubectl get pod -o wide  --kubeconfig /root/admin.conf'                  
+              sh 'sudo kubectl get svc    --kubeconfig /root/admin.conf'           
+          } 
+       }   
+ }
+}
