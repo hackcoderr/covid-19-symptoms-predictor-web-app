@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+      Covid Predictor</title>
+</head>
+<style>
+div {
+  /*border-radius: 5px;*/
+  background-color: #f2f2f2;
+  padding: 190px;
+  background-image: url(https://i.pinimg.com/originals/3e/8c/59/3e8c5974bd4cc79e6aa5afa893ce8b85.jpg);
+ /* filter: blur(2px);
+  -webkit-filter: blur(4px);*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+input[type=text], select {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background-color: #f3f6f9;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+}
+
+input[type=submit] {
+  width: 15%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+
+}
+.covid1{
+color: white;
+}
+</style>
+<body>
+<center>
+<div>
+        <h1 class="covid1"><center>Covid Predictor</center></h1>
+<form action='/output'  method="GET">
+<input type="text" name='z1' placeholder="Name: "/>
+<br />
+<input type="text" name='z2' placeholder="Age: "/>
+<br />
+<input type="text" name='z2' placeholder="Contact: "/>
+<br />
+<input type="text" name='z2' placeholder="Address: "/>
+<br />
+<input type="text" name='z2' placeholder="Conutry: "/>
+<br />
+
+<label>
+    <select>
+      <option value="" >Select Gender</option>
+      <option name='z6' value="">Male</option>
+      <option name='z6' value="">Female</option>
+    </select>
+</label>
+<br />
+<label>
+    <select>
+      <option value="">Fever  Yes/No</option>
+      <option name='z7' value="">Yes</option>
+      <option name='z7' value="">No</option>
+    </select>
+</label>
+<br />
+<label>
+    <select>
+      <option value="">Tiredness Yes/No</option>
+      <option name='z8' value="">Yes</option>
+      <option name='z8' value="">No</option>
+    </select>
+</label>
+<br />
+<label>
+    <select>
+      <option value=""> Dry Cough Yes/No</option>
+      <option name='z9' value="">Yes</option>
+      <option name='z9' value="">No</option>
+    </select>
+</label>
+<br />
+<label>
+    <select>
+      <option value="">Difficulty in Breathing Yes/No</option>
+      <option name='z10' value="">Yes</option>
+      <option name='z10' value="">No</option>
+    </select>
+</label>
+<br />
+<label>
+    <select>
+      <option value="">Sore throat Yes/No</option>
+      <option name='z11' value="">Yes</option>
+      <option name='z11' value="">No</option>
+    </select>
+</label>
+<br />
+<label>
+    <select>
+      <option value=""> Non Symtpon Yes/No</option>
+      <option name='z12' value="">Yes</option>
+      <option name='z12' value="">No</option>
+    </select>
+</label>
+<br />
+<label>
+    <select>
+      <option value="">Pains (Yes/No)</option>
+      <option name='z13' value="">Yes</option>
+      <option name='z13' value="">No</option>
+    </select>
+</label>
+<br />
+<label>
+    <select>
+	    <option value=""> Nasal congestion (Yes/No)</option>
+      <option name='z14' value="">Yes</option>
+      <option name='z14' value="">No</option>
+    </select>
+</label>
+<br />
+<label>
+    <select>
+      <option value=""> Runny Nose  (Yes/No)</option>
+      <option name='z15' value="">Yes</option>
+      <option name='z15' value="">No</option>
+    </select>
+</label>
+<br />
+<label>
+    <select>
+      <option value=""> Diarrhea (Yes/No)</option>
+      <option name='z16' value="">Yes</option>
+      <option name='z16' value="">No</option>
+    </select>
+</label>
+<br />
+<label>
+    <select>
+      <option value=""> Non-Experiencing (Yes/No)</option>
+      <option name='z17' value="">Yes</option>
+      <option name='z17' value="">No</option>
+    </select>
+</label>
+<br />
+<input value="Predict" type='submit' />
+<br />
+</form>
+</div>
+</center>
+</body>
+</html>
