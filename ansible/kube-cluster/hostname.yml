@@ -1,0 +1,37 @@
+---
+- hosts: tag_Name_covid_k8s
+  become: yes
+  gather_facts: false
+  tasks:
+    - name: Create hostname for MASTER-NODE
+      shell:
+         "sudo hostnamectl set-hostname k8s-master"
+
+
+- hosts: tag_Name_covid_k8s_worker_1
+  become: yes
+  gather_facts: false
+  tasks:
+    - name: Create hostname for WORKER-NODE-1
+      shell:
+         "sudo hostnamectl set-hostname worker1"
+
+
+- hosts: tag_Name_covid_k8s_worker_2
+  become: yes
+  gather_facts: false
+  tasks:
+    - name: Create hostname for WORKER-NODE-2
+      shell:
+         "sudo hostnamectl set-hostname worker-2"
+
+
+- hosts: controller-plane, workers
+  become: yes
+  gather_facts: false
+  tasks:
+    - name: debugging HOSTNAME
+      shell:
+         "hostname"
+      register: hostcmd
+    - debug: msg="{{hostcmd.stdout}}"

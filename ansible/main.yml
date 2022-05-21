@@ -1,4 +1,0 @@
----
- - hosts: jenkins
-   roles:
-   - jenkins
