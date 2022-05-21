@@ -1,6 +1,6 @@
 # Covid-19 symptoms Detector and Predictor Web Application
 
-Before Understanding the configuration of this, let's understand Idea of this [Project](https://docs.google.com/document/d/1R5i9oXPLtodqH0fOKodETXlgYID-WOgQG45665woM4M/edit?usp=sharing).
+Before Understanding the configuration of this, let's understand Idea of this [Project](https://github.com/hackcoderr/images/blob/master/major_project-art.jpg).
 
 As it's clear from the name **Covid-19 symptoms Detector and Predictor Web Application using Cloud platforms & MLOps tools**, we am going to create a health-related application with an industry approach. So let's see step by step all my activities for deploying this project in the production environment.
 
@@ -106,6 +106,20 @@ Run the ansible playbook to install docker swarm.
 ansible-playbook jenkins.yml
 ```
 type on brower ``Jenkins_server_IP:8080`` and then follow the instructions which are mentioned on jenkins first page and then chnage the password.
+
+### Train the Machine learning model
+This model is trained on colab and code is mentioned [here](./ml/covid_detection.ipynb).
+
+### Build web application
+Now build the web application using this trained ml model through flask. so flask code is mentioned [here](./flask/app.py)
+
+### Build the Docker image
+
+build the docker image using dockerfile.
+```
+docker build -t hackcoderr/covid-app:latest .
+```
+
 
 
 
