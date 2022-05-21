@@ -104,77 +104,37 @@
 	}
 	
 
-	/*
-	# launching instance 
+
+//	launching instance 
 	resource "aws_instance" "AWS-covid-instance" {
-	  ami    = "ami-0a9d27a9f4f5c0efc"
+	  ami    = "ami-0756a1c858554433e"
 	  count  = "3"
-	  instance_type = "t2.micro"
+	  instance_type = "t3.medium"
 	  subnet_id = "${aws_subnet.subnet-1a.id}"
 	  vpc_security_group_ids = ["${aws_security_group.SG.id}"]
-	  key_name = "key"
+	  key_name = "major_project"
 	 tags ={
 	    Environment = "${var.environment_tag}"
-	    Name= "AWS-covid-Instance"
+	    Name= "covid-k8s"
 	  }
 	
 	}
 	
 	
 	resource "aws_instance" "Ansible_Controller_Node" {
-	  ami           = "ami-0a9d27a9f4f5c0efc"
+	  ami           = "ami-0756a1c858554433e"
 	  instance_type = "t2.micro"
 	  subnet_id = "${aws_subnet.subnet-1a.id}"
 	  vpc_security_group_ids = ["${aws_security_group.SG.id}"]
-	  key_name = "key"
+	  key_name = "major_project"
 	 tags ={
 	    Environment = "${var.environment_tag}"
 	    Name= "Ansible_Controller_Node"
 	  }
 	
 	}
-	*/
 	
-
-	resource "aws_instance" "K8S_Master_Node" {
-	  ami           = "ami-04bde106886a53080"
-	  instance_type = "t2.medium"
-	  subnet_id = "${aws_subnet.subnet-1a.id}"
-	  vpc_security_group_ids = ["${aws_security_group.SG.id}"]
-	  key_name = "key"
-	 tags ={
-	    Environment = "${var.environment_tag}"
-	    Name= "K8S_Master_Node"
-	  }
 	
-
-	}
-	resource "aws_instance" "K8S_Slave1_Node" {
-	  ami           = "ami-04bde106886a53080"
-	  instance_type = "t2.medium"
-	  subnet_id = "${aws_subnet.subnet-1a.id}"
-	  vpc_security_group_ids = ["${aws_security_group.SG.id}"]
-	  key_name = "key"
-	 tags ={
-	    Environment = "${var.environment_tag}"
-	    Name= "K8S_Slave1_Node"
-	  }
-	
-
-	}
-	resource "aws_instance" "K8S_Slave2_Node" {
-	  ami           = "ami-04bde106886a53080"
-	  instance_type = "t2.medium"
-	  subnet_id = "${aws_subnet.subnet-1a.id}"
-	  vpc_security_group_ids = ["${aws_security_group.SG.id}"]
-	  key_name = "key"
-	 tags ={
-	    Environment = "${var.environment_tag}"
-	    Name= "K8S_Slave2_Node"
-	  }
-	
-
-	}
 	resource "aws_instance" "JenkinsNode" {
 	  ami           = "ami-0a9d27a9f4f5c0efc"
 	  instance_type = "t2.micro"
@@ -189,19 +149,3 @@
 
 	}
 	
-
-	/*
-	resource "aws_instance" "DockerNode" {
-	  ami           = "ami-0a9d27a9f4f5c0efc"
-	  instance_type = "t2.micro"
-	  subnet_id = "${aws_subnet.subnet-1a.id}"
-	  vpc_security_group_ids = ["${aws_security_group.SG.id}"]
-	  key_name = "key"
-	 tags ={
-	    Environment = "${var.environment_tag}"
-	    Name= "DockerNode"
-	  }
-	
-	}
-	
-	*/
