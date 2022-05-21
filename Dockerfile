@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM centos:7
 RUN yum install python3  python3-devel   gcc-c++ -y && \
     python3 -m pip install --upgrade --force-reinstall pip && \
     yum install sudo -y && \
@@ -9,13 +9,13 @@ RUN yum install python3  python3-devel   gcc-c++ -y && \
     pip3 install flask && \
     pip3 install joblib && \
     pip3 install sklearn && \
-    mkdir  /covid_app &&  \
-    mkdir /covid_app/templates
-COPY RandomForest_Covid_Prediction.h5    /covid_app
-COPY  app.py  /covid_app
-COPY  myform.html  /covid_app/templates
-COPY  results.html   /covid_app/templates
-EXPOSE  4444
-WORKDIR  /covid_app
+    mkdir  /covid19 &&  \
+    mkdir /covid19/templates
+COPY ./covid-19.h5     /covid19
+COPY  ./flask/app.py  /covid19
+COPY  ./src/  /covid19/templates
+
+EXPOSE  6666
+WORKDIR  /covid19
 CMD export FLASK_APP=app.py
-ENTRYPOINT flask  run --host=0.0.0.0    --port=4444
+ENTRYPOINT flask  run --host=0.0.0.0    --port=6666

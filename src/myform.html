@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Covid 19 Symptom Analysis</title>
+</head>
+<style>
+div {
+  /*border-radius: 5px;*/
+  background-color: #f2f2f2;
+  padding: 50px;
+  background-image: url(https://images.unsplash.com/photo-1584036533827-45bce166ad94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y29yb25hdmlydXN8ZW58MHx8MHx8&w=1000&q=80);
+ /* filter: blur(2px);
+  -webkit-filter: blur(4px);*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+input[type=text], select {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background-color: #e1e6ec;
+  display: inline-block;
+  border: 1px solid rgb(150, 147, 231);
+  border-radius: 10px;
+  box-sizing: border-box;
+
+}
+
+.heart1{
+    color: rgb(255, 16, 16);
+
+
+}
+
+input[type=submit] {
+  width: 15%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+
+}
+
+</style>
+<body>
+<center>
+<div>
+        <h1 class="heart1" style="color:black"><center>Covid-19 Symptom Analysis</center></h1>
+<form action='/output'  method="post">
+<label>
+    <select name='z1'>
+      <option value="" >Breathing Problem</option>
+      <option value="yes">yes</option>
+      <option value="no">no</option>
+    </select>
+</label>
+<br />
+<label>
+  <select name='z2'>
+    <option value="" >Fever</option>
+    <option  value="yes">yes</option>
+    <option  value="no">no</option>
+  </select>
+</label>
+<br />
+<label>
+  <select name='z3'>
+    <option value="" >Dry Cough</option>
+    <option  value="yes">yes</option>
+    <option  value="no">no</option>
+  </select>
+</label>
+<br />
+<label>
+  <select name='z4'>
+    <option value="" >Sore throat</option>
+    <option  value="yes">yes</option>
+    <option  value="no">no</option>
+  </select>
+</label>
+<br />
+<label>
+  <select name='z5'>
+    <option value="" >Hyper Tension</option>
+    <option  value="yes">yes</option>
+    <option  value="no">no</option>
+  </select>
+</label>
+<br />
+<label>
+  <select name='z6'>
+    <option value="" >Abroad travel</option>
+    <option  value="yes">yes</option>
+    <option  value="no">no</option>
+  </select>
+</label>
+<br />
+<label>
+  <select name='z7'>
+    <option value="" >Contact with COVID Patient</option>
+    <option  value="yes">yes</option>
+    <option  value="no">no</option>
+  </select>
+</label>
+<br />
+<label>
+  <select name='z8'>
+    <option value="" >Attended Large Gathering</option>
+    <option  value="yes">yes</option>
+    <option  value="no">no</option>
+  </select>
+</label>
+<br />
+<label>
+  <select name='z9'>
+    <option value="" >Visited Public Exposed Places</option>
+    <option value="yes">yes</option>
+    <option value="no">no</option>
+  </select>
+</label>
+<br />
+<label>
+  <select name='z10'>
+    <option value="" >Family working in Public Exposed Places</option>
+    <option value="yes">yes</option>
+    <option value="no">no</option>
+  </select>
+</label>
+<br />
+<input value="Submit" type='submit' />
+<br />
+</form>
+</div>
+</center>
+</body>
+</html>

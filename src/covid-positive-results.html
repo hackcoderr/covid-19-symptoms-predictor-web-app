@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Covid 19 Symptom Analysis Results</title>
+</head>
+<style>
+div {
+  /*border-radius: 5px;*/
+  background-color: #f2f2f2;
+  padding: 300px;
+  background-image: url(https://www.umw.edu/covidcourse/wp-content/uploads/sites/51/2020/05/COVID-19_header.jpg);
+  filter: blur(0.2px);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.bg{
+color: black;
+font-size: 50px;
+}
+
+.hospital {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<body>
+<center>
+        <div>
+                <h1 class=bg> {{data}} </h1>
+        </div>
+        <input type="button" class=hospital onclick="location.href='https://www.google.com/search?q=hospitals+near+me+with+gps+location&sxsrf=ALiCzsYXa4TUsug5LkpIrqdoQs3ceH3nag%3A1651919859254&ei=80t2Yq-dD_Pc5OUP_f6i0AI&oq=hospitals+near+me+with+gps+&gs_lcp=Cgdnd3Mtd2l6EAMYADIFCCEQoAEyBQghEKABMgUIIRCgATIICCEQFhAdEB46BwgAEEcQsAM6CggAEEcQsAMQyQM6BwgAELADEEM6BQgAEIAEOggIABCABBDJAzoFCAAQkgM6BggAEBYQHkoECEEYAEoECEYYAFCGA1jrGWCGIWgBcAF4AIABuQGIAYoLkgEEMC4xMJgBAKABAcgBCsABAQ&sclient=gws-wiz';" value="search for hospitals" />
+</center>
+</body>
+</html>
