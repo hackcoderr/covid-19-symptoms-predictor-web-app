@@ -1,12 +1,35 @@
 # Covid-19 symptoms Detector and Predictor Web Application
 
+## Aim
+
+Covid detection and prediction on the basis of symptoms provided by the patients.
+
+
+
+
+## Objective 
+
+To Make people aware about that conditions on the given symptoms, to help people around the globe, to save the time of 
+Patients admitted to the hospital on time, to save the lives of people.
+
+
+
+## Problem Statement
+ 
+Covid detection and prediction is a little difficult , cause the symptoms are very common from other health issues Covid detector and predictor application analyse data on the Bases on machine learning model and that provide accuracy that. These symptoms are of covid or not. 
+
+## Solution
+
+At the end of deploy, application works like [this](http://13.233.233.72:7777/covid)
+
+
 Before Understanding the configuration of this, let's understand Idea of this [Project](https://github.com/hackcoderr/images/blob/master/major_project-art.jpg).
 
 As it's clear from the name **Covid-19 symptoms Detector and Predictor Web Application using Cloud platforms & MLOps tools**, we am going to create a health-related application with an industry approach. So let's see step by step all my activities for deploying this project in the production environment.
 
 ### What We are  going to perform.
 I will create this type of architecture to deploy my web app. so let see step by step.
-![Alt Text](https://www.canva.com/design/DAEYuceJvBs/Vj8KGdE5dKLp36d2VHwt0A/view?utm_content=DAEYuceJvBs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
+![Alt Text](https://github.com/hackcoderr/images/blob/master/major_project-art.jpg)
 
 
 
@@ -120,6 +143,11 @@ build the docker image using dockerfile.
 docker build -t hackcoderr/covid-app:latest .
 ```
 
+### Deploy this application on k8s 
+for more [info](https://github.com/hackcoderr/covid-19-symptoms-predictor-web-app/blob/master/jenkins/jenkinfile)
 
+## Test
+
+Now our application is running good. let [check it](http://13.233.233.72:7777/covid)
 
 
